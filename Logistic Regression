@@ -1,0 +1,7 @@
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
+LR = LogisticRegression(C=0.01, solver='liblinear').fit(X_train,y_train)
+LR
+yhatl = LR.predict(X_test)
+yhatl
+yhat_prob = LR.predict_proba(X_test)
